@@ -88,16 +88,20 @@ WSGI_APPLICATION = 'backend.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'ship',
-        'USER': 'postgres',
-        'PASSWORD': 'Saurabh@123',
-        'HOST': 'localhost',  
-        'PORT': '5432',        
+        'ENGINE': '',
+        'NAME': '',
+        'USER': '',
+        'PASSWORD': '',
+        'HOST': '',  
+        'PORT': '',        
     }
 }
 
-DATABASES["default"]["ATOMIC_REQUESTS"] = True
+#DATABASES["default"]["ATOMIC_REQUESTS"] = True
+
+DATABASES['default'] = dj_database_url.parse('postgresql://shipmnts_postresql_db_user:dwBLW1DT8FVJN7TMk7e6EgdJWkyjAn9E@dpg-cqmc2uhu0jms73fq1d90-a.oregon-postgres.render.com/shipmnts_postresql_db')
+
+
 
 # Password validation
 # https://docs.djangoproject.com/en/4.0/ref/settings/#auth-password-validators
